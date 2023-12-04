@@ -1,0 +1,232 @@
+﻿marbveiga@panoiseman:~$ pwd
+/home/marbveiga
+marbveiga@panoiseman:~$ mkdir uffs
+marbveiga@panoiseman:~$ cd uffs
+marbveiga@panoiseman:~/uffs$ pwd
+/home/marbveiga/uffs
+marbveiga@panoiseman:~/uffs$ mkdir trabalho
+marbveiga@panoiseman:~/uffs$ cd trabalho
+marbveiga@panoiseman:~/uffs/trabalho$ mkdir textosd
+marbveiga@panoiseman:~/uffs/trabalho$ rm textosd
+rm: cannot remove 'textosd': Is a directory
+marbveiga@panoiseman:~/uffs/trabalho$ rm -r textosd
+marbveiga@panoiseman:~/uffs/trabalho$ ls -a
+.  ..
+marbveiga@panoiseman:~/uffs/trabalho$ mkdir textos
+marbveiga@panoiseman:~/uffs/trabalho$ cd textos
+marbveiga@panoiseman:~/uffs/trabalho/textos$ cd..
+bash: cd..: command not found
+marbveiga@panoiseman:~/uffs/trabalho/textos$ cd ..
+marbveiga@panoiseman:~/uffs/trabalho$ cd ..
+marbveiga@panoiseman:~/uffs$ touch teste.txt
+marbveiga@panoiseman:~/uffs$ nano teste.txt
+marbveiga@panoiseman:~/uffs$ cp teste.txt teste1.txt
+marbveiga@panoiseman:~/uffs$ ls -a
+.  ..  teste1.txt  teste.txt  trabalho
+marbveiga@panoiseman:~/uffs$ cp teste.txt teste.asc
+marbveiga@panoiseman:~/uffs$ ls -a
+.  ..  teste1.txt  teste.asc  teste.txt  trabalho
+marbveiga@panoiseman:~/uffs$ cp teste.txt teste1.txt /uffs/trabalhos/
+cp: target '/uffs/trabalhos/': No such file or directory
+marbveiga@panoiseman:~/uffs$ cp teste.txt teste1.txt /uffs/trabalhos
+cp: target '/uffs/trabalhos': No such file or directory
+marbveiga@panoiseman:~/uffs$ cp teste.txt teste1.txt /uffs/trabalho
+cp: target '/uffs/trabalho': No such file or directory
+marbveiga@panoiseman:~/uffs$ cp teste1.txt teste.txt /uffs/trabalho/
+cp: target '/uffs/trabalho/': No such file or directory
+marbveiga@panoiseman:~/uffs$ cp -r teste.txt teste1.txt /uffs/trabalho
+cp: target '/uffs/trabalho': No such file or directory
+marbveiga@panoiseman:~/uffs$ cp -r teste.txt teste1.txt /uffs/trabalho/
+cp: target '/uffs/trabalho/': No such file or directory
+marbveiga@panoiseman:~/uffs$ cp -r teste.txt teste1.txt /trabalho
+cp: target '/trabalho': No such file or directory
+marbveiga@panoiseman:~/uffs$ pwd
+/home/marbveiga/uffs
+marbveiga@panoiseman:~/uffs$ cp -r teste.txt teste1.txt /home/marbveiga/uffs/trabalho
+marbveiga@panoiseman:~/uffs$ cd trabalho
+marbveiga@panoiseman:~/uffs/trabalho$ ls -a
+.  ..  teste1.txt  teste.txt  textos
+marbveiga@panoiseman:~/uffs/trabalho$ cd ..
+marbveiga@panoiseman:~/uffs$ ls -a
+.  ..  teste1.txt  teste.asc  teste.txt  trabalho
+marbveiga@panoiseman:~/uffs$ mv teste.asc /home/marbveiga/uffs/trabalho/texto
+marbveiga@panoiseman:~/uffs$ cd trabalho
+marbveiga@panoiseman:~/uffs/trabalho$ cd texto
+bash: cd: texto: Not a directory
+marbveiga@panoiseman:~/uffs/trabalho$ cd textos
+marbveiga@panoiseman:~/uffs/trabalho/textos$ ls -a
+.  ..
+marbveiga@panoiseman:~/uffs/trabalho/textos$ cd ..
+marbveiga@panoiseman:~/uffs/trabalho$ cd ..
+marbveiga@panoiseman:~/uffs$ ls -a
+.  ..  teste1.txt  teste.txt  trabalho
+marbveiga@panoiseman:~/uffs$ mv trabalho texto.asc
+marbveiga@panoiseman:~/uffs$ ls -a
+.  ..  teste1.txt  teste.txt  texto.asc
+marbveiga@panoiseman:~/uffs$ mv texto.asc /home/marbveiga/uffs/trabalho/textos
+mv: cannot move 'texto.asc' to '/home/marbveiga/uffs/trabalho/textos': No such file or directory
+marbveiga@panoiseman:~/uffs$ cd texto.asc
+marbveiga@panoiseman:~/uffs/texto.asc$ cd ..
+marbveiga@panoiseman:~/uffs$ cd texto.asc
+marbveiga@panoiseman:~/uffs/texto.asc$ ls -a
+.  ..  teste1.txt  teste.txt  texto  textos
+marbveiga@panoiseman:~/uffs/texto.asc$ cd textos
+marbveiga@panoiseman:~/uffs/texto.asc/textos$ ls -a
+.  ..
+marbveiga@panoiseman:~/uffs/texto.asc/textos$ cd ..
+marbveiga@panoiseman:~/uffs/texto.asc$ cd ..
+marbveiga@panoiseman:~/uffs$ mv texto.asc trabalhos
+marbveiga@panoiseman:~/uffs$ ls -a
+.  ..  teste1.txt  teste.txt  trabalhos
+marbveiga@panoiseman:~/uffs$ cd trabalhos
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -a
+.  ..  teste1.txt  teste.txt  texto  textos
+marbveiga@panoiseman:~/uffs/trabalhos$ nano texto
+marbveiga@panoiseman:~/uffs/trabalhos$ mv texto texto.asc
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -a
+.  ..  teste1.txt  teste.txt  texto.asc  textos
+marbveiga@panoiseman:~/uffs/trabalhos$ mv texto.asc teste.asc
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -a
+.  ..  teste1.txt  teste.asc  teste.txt  textos
+marbveiga@panoiseman:~/uffs/trabalhos$ mv teste.asc /home/marbveiga/uffs/trabalhos/textos
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -a
+.  ..  teste1.txt  teste.txt  textos
+marbveiga@panoiseman:~/uffs/trabalhos$ cd textos
+marbveiga@panoiseman:~/uffs/trabalhos/textos$ ls -a
+.  ..  teste.asc
+marbveiga@panoiseman:~/uffs/trabalhos/textos$ ls -la
+total 12
+drwxr-xr-x 2 marbveiga marbveiga 4096 Dec  3 18:16 .
+drwxr-xr-x 3 marbveiga marbveiga 4096 Dec  3 18:16 ..
+-rw-r--r-- 1 marbveiga marbveiga   60 Dec  3 18:07 teste.asc
+marbveiga@panoiseman:~/uffs/trabalhos/textos$ cd ..
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -la
+total 20
+drwxr-xr-x 3 marbveiga marbveiga 4096 Dec  3 18:16 .
+drwxr-xr-x 3 marbveiga marbveiga 4096 Dec  3 18:14 ..
+-rw-r--r-- 1 marbveiga marbveiga   60 Dec  3 18:11 teste1.txt
+-rw-r--r-- 1 marbveiga marbveiga   60 Dec  3 18:11 teste.txt
+drwxr-xr-x 2 marbveiga marbveiga 4096 Dec  3 18:16 textos
+marbveiga@panoiseman:~/uffs/trabalhos$ chmod teste.txt 664
+chmod: invalid mode: ‘teste.txt’
+Try 'chmod --help' for more information.
+marbveiga@panoiseman:~/uffs/trabalhos$ pwd
+/home/marbveiga/uffs/trabalhos
+marbveiga@panoiseman:~/uffs/trabalhos$ chmod 664 teste.txt
+marbveiga@panoiseman:~/uffs/trabalhos$ chmod 644 teste1.txt
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -la
+total 20
+drwxr-xr-x 3 marbveiga marbveiga 4096 Dec  3 18:16 .
+drwxr-xr-x 3 marbveiga marbveiga 4096 Dec  3 18:14 ..
+-rw-r--r-- 1 marbveiga marbveiga   60 Dec  3 18:11 teste1.txt
+-rw-rw-r-- 1 marbveiga marbveiga   60 Dec  3 18:11 teste.txt
+drwxr-xr-x 2 marbveiga marbveiga 4096 Dec  3 18:16 textos
+marbveiga@panoiseman:~/uffs/trabalhos$ cd ..
+marbveiga@panoiseman:~/uffs$ cd ..
+marbveiga@panoiseman:~$ mkdir uffs_backup
+marbveiga@panoiseman:~$ cp -r uffs uffs_backup
+marbveiga@panoiseman:~$ cd uffs_backup
+marbveiga@panoiseman:~/uffs_backup$ ls -la
+total 12
+drwxr-xr-x  3 marbveiga marbveiga 4096 Dec  3 18:21 .
+drwx------ 18 marbveiga marbveiga 4096 Dec  3 18:21 ..
+drwxr-xr-x  3 marbveiga marbveiga 4096 Dec  3 18:21 uffs
+marbveiga@panoiseman:~/uffs_backup$ cd uffs
+marbveiga@panoiseman:~/uffs_backup/uffs$ ls -a
+.  ..  teste1.txt  teste.txt  trabalhos
+marbveiga@panoiseman:~/uffs_backup/uffs$ cd ..
+marbveiga@panoiseman:~/uffs_backup$ cd ..
+marbveiga@panoiseman:~$ cd uffs
+marbveiga@panoiseman:~/uffs$ cd trabalhos
+marbveiga@panoiseman:~/uffs/trabalhos$ cd textos 
+marbveiga@panoiseman:~/uffs/trabalhos/textos$ cp teste.asc /home/marbveiga/uffs/trabalhos
+marbveiga@panoiseman:~/uffs/trabalhos/textos$ cd ..
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -a
+.  ..  teste1.txt  teste.asc  teste.txt  textos
+marbveiga@panoiseman:~/uffs/trabalhos$ rm -r textos
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -a
+.  ..  teste1.txt  teste.asc  teste.txt
+marbveiga@panoiseman:~/uffs/trabalhos$ mv teste.asc outro_texto.txt
+marbveiga@panoiseman:~/uffs/trabalhos$ ls -a
+.  ..  outro_texto.txt  teste1.txt  teste.txt
+marbveiga@panoiseman:~/uffs/trabalhos$ cat outro_texto.txt
+20230002952
+Marco Antonio Bernardeli da Veiga
+Chapecó - SC
+marbveiga@panoiseman:~/uffs/trabalhos$ 
+
+
+------------------------
+
+github log:
+
+marbveiga@panoiseman:~/githuberson_da_silva$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/marbveiga/githuberson_da_silva/.git/
+marbveiga@panoiseman:~/githuberson_da_silva$ touch readme.txt
+marbveiga@panoiseman:~/githuberson_da_silva$ git add readme.txt
+marbveiga@panoiseman:~/githuberson_da_silva$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   readme.txt
+
+marbveiga@panoiseman:~/githuberson_da_silva$ git commit -m "trabalho de inf. basica"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'marbveiga@panoiseman.(none)')
+marbveiga@panoiseman:~/githuberson_da_silva$ git config --global user.email "marabdv@gmail.com"
+marbveiga@panoiseman:~/githuberson_da_silva$ git config --global user.name "Marco"
+marbveiga@panoiseman:~/githuberson_da_silva$ git commit -m "trabalho de inf. basica"
+[master (root-commit) 6b8102e] trabalho de inf. basica
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.txt
+marbveiga@panoiseman:~/githuberson_da_silva$ git status
+On branch master
+nothing to commit, working tree clean
+marbveiga@panoiseman:~/githuberson_da_silva$ git remote add origin https://github.com/Panoise/suffer.git
+marbveiga@panoiseman:~/githuberson_da_silva$ git remote -v
+origin	https://github.com/Panoise/suffer.git (fetch)
+origin	https://github.com/Panoise/suffer.git (push)
+marbveiga@panoiseman:~/githuberson_da_silva$ git push origin master
+Username for 'https://github.com': Panoise
+Password for 'https://Panoise@github.com': 
+remote: Permission to Panoise/suffer.git denied to Panoise.
+fatal: unable to access 'https://github.com/Panoise/suffer.git/': The requested URL returned error: 403
+marbveiga@panoiseman:~/githuberson_da_silva$ sudo git push origin master
+Username for 'https://github.com': panoise
+Password for 'https://panoise@github.com': 
+remote: Permission to Panoise/suffer.git denied to Panoise.
+fatal: unable to access 'https://github.com/Panoise/suffer.git/': The requested URL returned error: 403
+marbveiga@panoiseman:~/githuberson_da_silva$ sudo git push origin master
+Username for 'https://github.com': panoise
+Password for 'https://panoise@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 216 bytes | 108.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Panoise/suffer.git
+ * [new branch]      master -> master
+marbveiga@panoiseman:~/githuberson_da_silva$ 
